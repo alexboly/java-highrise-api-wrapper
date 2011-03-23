@@ -8,9 +8,10 @@ import org.w3c.dom.NodeList;
 
 /***
  * 
- * Collection of BaseCamp People Objects
+ * Collection of Highrise People Objects
  * 
  * @author jondavidjohn
+ * @author judeibe
  *
  */
 public class People extends HighriseEntity {
@@ -19,9 +20,9 @@ public class People extends HighriseEntity {
 	private int personCount = 0;
 
 	/***
-	 * Get All People
+	 * Returns a collection of people that are visible to the authenticated user. 
 	 * 
-	 * @param auth	BCAuth
+	 * @param auth	HRAuth
 	 */
 	public People(HRAuth auth) {
 		

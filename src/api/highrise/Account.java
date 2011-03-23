@@ -26,7 +26,7 @@ public class Account extends HighriseEntity {
 	//private int 		primaryCompanyId;
 	private String subscriptionPlan;
 	private String theme;
-	private int peoples;
+	private int people;
 	
 	//--- Account Subscription information
 //	public Subscription subscription;
@@ -34,9 +34,9 @@ public class Account extends HighriseEntity {
 
 	
 	/***
-	 * Initializes Account object with given auth info
+	 * Returns info about the current user’s Highrise account.
 	 * 
-	 * @param auth	General BaseCamp account information object
+	 * @param auth	General Highrise account information object
 	 */
 	public Account(HRAuth auth) {
 		
@@ -57,7 +57,7 @@ public class Account extends HighriseEntity {
 		//this.primaryCompanyId = ElementValue.getIntValue(accountElement,  "primary-company-id");
 		this.subscriptionPlan = ElementValue.getTextValue(accountElement, "plan");
 		this.theme			  = ElementValue.getTextValue(accountElement, "color_theme");
-		this.peoples		  = ElementValue.getIntValue(accountElement, "people-count");
+		this.people		  = ElementValue.getIntValue(accountElement, "people-count");
 		
 		//get 'subscription' sub element
 		//NodeList nl = accountElement.getElementsByTagName("subscription");
@@ -155,8 +155,8 @@ public class Account extends HighriseEntity {
 	/**
 	 * @return the peoples
 	 */
-	public int getPeoples() {
-		return peoples;
+	public int getPeople() {
+		return people;
 	}
 
 	/**
