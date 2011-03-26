@@ -11,7 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import sun.misc.BASE64Encoder;
+//import sun.misc.BASE64Encoder;
 
 /***
  * Base for building out BaseCamp Entities
@@ -59,9 +59,9 @@ abstract class HighriseEntity {
 	        URL url = new URL(this.baseUrl + request);
 	        connection = (HttpURLConnection) url.openConnection();
 	        connection.setRequestMethod("GET");
-	        BASE64Encoder enc = new sun.misc.BASE64Encoder();
+	        //BASE64Encoder enc = new sun.misc.BASE64Encoder();
 	        String userpassword = this.username + ":" + this.password;
-	        String encodedAuthorization = enc.encode( userpassword.getBytes() );
+	        String encodedAuthorization = Base64.encodeBytes( userpassword.getBytes() );
 	        connection.setRequestProperty("Authorization", "Basic "+ encodedAuthorization);
 	        connection.setRequestProperty("Content-type", "application/xml");
 	        connection.setRequestProperty("Accept", "application/xml");
@@ -111,9 +111,9 @@ abstract class HighriseEntity {
 	        URL url = new URL(this.baseUrl + requestURL);
 	        connection = (HttpURLConnection) url.openConnection();
 	        connection.setRequestMethod("POST");
-	        BASE64Encoder enc = new sun.misc.BASE64Encoder();
+	        //BASE64Encoder enc = new sun.misc.BASE64Encoder();
 	        String userpassword = this.username + ":" + this.password;
-	        String encodedAuthorization = enc.encode( userpassword.getBytes() );
+	        String encodedAuthorization = Base64.encodeBytes( userpassword.getBytes() );
 	        connection.setRequestProperty("Authorization", "Basic "+ encodedAuthorization);
 	        connection.setRequestProperty("Content-type", "application/xml");
 	        connection.setRequestProperty("Accept", "application/xml");
@@ -178,9 +178,9 @@ abstract class HighriseEntity {
 	        URL url = new URL(this.baseUrl + requestURL);
 	        connection = (HttpURLConnection) url.openConnection();
 	        connection.setRequestMethod("PUT");
-	        BASE64Encoder enc = new sun.misc.BASE64Encoder();
+	        //BASE64Encoder enc = new sun.misc.BASE64Encoder();
 	        String userpassword = this.username + ":" + this.password;
-	        String encodedAuthorization = enc.encode( userpassword.getBytes() );
+	        String encodedAuthorization = Base64.encodeBytes( userpassword.getBytes() );
 	        connection.setRequestProperty("Authorization", "Basic "+ encodedAuthorization);
 	        connection.setRequestProperty("Content-type", "application/xml");
 	        connection.setRequestProperty("Accept", "application/xml");
@@ -241,9 +241,9 @@ abstract class HighriseEntity {
 	        URL url = new URL(this.baseUrl + request);
 	        connection = (HttpURLConnection) url.openConnection();
 	        connection.setRequestMethod("DELETE");
-	        BASE64Encoder enc = new sun.misc.BASE64Encoder();
+	        //BASE64Encoder enc = new sun.misc.BASE64Encoder();
 	        String userpassword = this.username + ":" + this.password;
-	        String encodedAuthorization = enc.encode( userpassword.getBytes() );
+	        String encodedAuthorization = Base64.encodeBytes( userpassword.getBytes() );
 	        connection.setRequestProperty("Authorization", "Basic "+ encodedAuthorization);
 	        connection.setRequestProperty("Content-type", "application/xml");
 	        connection.setRequestProperty("Accept", "application/xml");
