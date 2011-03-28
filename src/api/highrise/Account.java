@@ -46,10 +46,10 @@ public class Account extends HighriseEntity {
 		
 		//load up Account 
 		this.createdAt 		  = ElementValue.getDateTimeValue(accountElement, "created-at");
-		this.id 		  	  = ElementValue.getIntValue(accountElement,  "id");
+		this.accountHolderId 		  	  = ElementValue.getIntValue(accountElement,  "id");
 		this.updatedAt 		  = ElementValue.getDateTimeValue(accountElement, "updated-at");
 		this.companyName 	  = ElementValue.getTextValue(accountElement, "name");
-		this.accountHolderId  = ElementValue.getIntValue(accountElement,  "owner-id");
+		//this.accountHolderId  = ElementValue.getIntValue(accountElement,  "owner-id");
 		this.isSsl 			  = ElementValue.getBoolValue(accountElement, "ssl-enabled");
 		//this.isTimeTracking   = ElementValue.getBoolValue(accountElement, "time-tracking");
 		//this.isEmailNotify 	  = ElementValue.getBoolValue(accountElement, "email-notification-enabled");

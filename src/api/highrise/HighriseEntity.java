@@ -22,7 +22,7 @@ import org.w3c.dom.Element;
  * @author judeibe
  */
 abstract class HighriseEntity {
-	
+
 	//--- User / Company Authentication information
 	private String username;
 	private String password;
